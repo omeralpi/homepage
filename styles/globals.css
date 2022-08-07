@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/Inter.var.woff2?v=3.19') format('woff2');
+  }
+  @font-face {
+    font-family: 'Tiempos';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/TiemposTextWeb-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Tiempos';
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    src: url('/fonts/TiemposTextWeb-RegularItalic.woff2') format('woff2');
+  }
+
+  html {
+    font-family: "Inter", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .post-body > * {
+    margin-bottom: 2rem;
+    scroll-margin-top: 2rem;
+  }
+
+  .post-body pre {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .post-body pre[class*="language-"]::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .c-small {
+    @apply max-w-screen-sm mx-auto px-6;
+  }
+
+  .c-large {
+    @apply max-w-screen-xl mx-auto px-6;
+  }
+}
