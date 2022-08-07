@@ -10,17 +10,20 @@ export default function HomePage() {
           <Text as="h1" size="pageTitle">
             Merhaba, Ben Ömer 👋
             <br />
-            Yeri yurdu olmayan, düşünceli bir yazılım geliştiriciyim.
+            Yeri yurdu belli olmayan, düşünceli (?) bir yazılım geliştiriciyim.
           </Text>
 
           <Text as="p" size="large" dim={1}>
-            Motosiklet sürmeyi, MacBook ekranı silmeyi seviyorum. Doğa, spor
-            (voleybol, koşu vb.), karavan & kamp beni tanımlayan ama aynı
-            zamanda hayatıma tam anlamıyla entegre edemediğim kavramlardır.
+            Motosiklet sürmeyi severim. Özellikle de MacBook ekranı silmek
+            hobilerimin başında gelir.
+            <br />
+            <br />
+            Kamp, voleybol, koşu, beni tanımlayan ama aynı zamanda hayatıma tam
+            anlamıyla entegre edemediğim kavramlar.
           </Text>
 
           <Text as="p" size="large" dim={1}>
-            Son zamanlarda Airsoft&apos;a ilgim var ve bir de bir Vosvosum olsun çok
+            Son zamanlarda Airsoft&apos;a ilgim var ve bir de bir Vosvosum olsun
             istiyorum... 🚗
           </Text>
         </div>
