@@ -38,9 +38,11 @@ export default function VideoCard({ tool }: { tool: ITool }) {
         position: isPresent ? "static" : "absolute",
       }}
     >
-      <figure className="aspect-square overflow-hidden rounded-md">
+      <figure className="w-100 h-100 relative aspect-square overflow-hidden rounded-md">
         {photo && (
           <Image
+            layout="fill"
+            objectFit="contain"
             src={photo.thumbnails.large.url}
             className="h-full w-full object-contain"
             alt={`${brand} ${name}`}
