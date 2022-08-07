@@ -1,4 +1,3 @@
-import NextImage from "next/image";
 import PageTransition from "components/page-transition";
 import Social from "components/social";
 import Text from "components/text";
@@ -21,7 +20,7 @@ export default function HomePage() {
           </Text>
 
           <Text as="p" size="large" dim={1}>
-            Son zamanlarda Airsoft'a ilgim var ve bir de bir Vosvosum olsun çok
+            Son zamanlarda Airsoft&apos;a ilgim var ve bir de bir Vosvosum olsun çok
             istiyorum... 🚗
           </Text>
         </div>

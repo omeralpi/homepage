@@ -2,6 +2,7 @@ import type { IAirtableImages, ITool } from "types/index";
 import { motion, usePresence } from "framer-motion";
 import Text from "./text";
 import Rating from "./rating";
+import Image from "next/image";
 
 export default function VideoCard({ tool }: { tool: ITool }) {
   const { images, brand, name, rating, comment } = tool;
@@ -39,7 +40,7 @@ export default function VideoCard({ tool }: { tool: ITool }) {
     >
       <figure className="aspect-square overflow-hidden rounded-md">
         {photo && (
-          <img
+          <Image
             src={photo.thumbnails.large.url}
             className="h-full w-full object-contain"
             alt={`${brand} ${name}`}

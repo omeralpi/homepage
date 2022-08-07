@@ -11,7 +11,7 @@ export type Props = {
 function A({ children, href, blank = true, className, ...props }: Props) {
   const isBlank = blank
     ? {
-        rel: "noopener noreferrer",
+        rel: "noreferrer",
         target: "_blank",
       }
     : {};
