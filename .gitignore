@@ -10,5 +10,4 @@ out/
 .env.local
 public/feed.xml
 .vercel
-.contentlayer
 .history
