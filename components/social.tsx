@@ -1,8 +1,6 @@
-import { meta } from "../site.config";
 import A from "components/a";
-import IconTwitter from "components/icons/twitter";
 import IconGithub from "components/icons/github";
-import IconInstagram from "components/icons/instagram";
+import { meta } from "../site.config";
 
 function SocialButton({ href, children }) {
   return (
@@ -21,20 +19,12 @@ function SocialButton({ href, children }) {
 }
 
 function Social() {
-  const { twitter, github, instagram } = meta.social;
+  const { github } = meta.social;
 
   return (
     <div className="flex items-center space-x-3">
       <SocialButton href={"mailto:" + meta.author.email}>
         <span className="mx-2 font-medium">Email</span>
-      </SocialButton>
-
-      <SocialButton href={instagram}>
-        <IconInstagram />
-      </SocialButton>
-
-      <SocialButton href={twitter}>
-        <IconTwitter />
       </SocialButton>
 
       <SocialButton href={github}>
