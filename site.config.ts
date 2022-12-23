@@ -14,5 +14,6 @@ export const meta = {
     twitter: "https://twitter.com/alpidev",
     medium: "https://medium.com/@alpidev",
     github: "https://github.com/devalpi",
+    letterboxd: "https://letterboxd.com/devalpi/",
   },
 };
