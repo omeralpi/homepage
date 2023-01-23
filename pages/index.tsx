@@ -10,12 +10,8 @@ export default function HomePage() {
           <Text as="h1" size="pageTitle">
             Merhaba, Ben Ömer 👋
             <br />
-            Şu an için İstanbul&apos;da yaşıyorum. Yazılım geliştirme ile
-            ilgileniyorum.
-          </Text>
-
-          <Text as="p" size="large" dim={1}>
-            Yakında burayı güncelleyeceğim. 🚧 (10.09.2022)
+            İçimdeki çocuğu tatmin etmek için yazılım geliştirme ile
+            uğraşıyorum.
           </Text>
         </div>
 
