@@ -1,8 +1,6 @@
 import A from "components/a";
 import IconGithub from "components/icons/github";
 import { meta } from "../site.config";
-import IconLetterboxd from "./icons/letterboxd";
-import IconTwitter from "./icons/twitter";
 
 function SocialButton({ href, children }) {
   return (
@@ -20,7 +18,7 @@ function SocialButton({ href, children }) {
 }
 
 function Social() {
-  const { github, twitter, letterboxd } = meta.social;
+  const { github } = meta.social;
 
   return (
     <div className="flex items-center space-x-3">
@@ -30,14 +28,6 @@ function Social() {
 
       <SocialButton href={github}>
         <IconGithub />
-      </SocialButton>
-
-      <SocialButton href={twitter}>
-        <IconTwitter />
-      </SocialButton>
-
-      <SocialButton href={letterboxd}>
-        <IconLetterboxd />
       </SocialButton>
     </div>
   );

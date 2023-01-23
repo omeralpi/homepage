@@ -8,12 +8,6 @@ export const meta = {
     name: "Ömer Alpi",
   },
   social: {
-    unsplash: "https://unsplash.com/@alpidev",
-    vsco: "https://vsco.co/alpidev",
-    instagram: "https://instagram.com/alpidev",
-    twitter: "https://twitter.com/alpidev",
-    medium: "https://medium.com/@alpidev",
     github: "https://github.com/devalpi",
-    letterboxd: "https://letterboxd.com/devalpi/",
   },
 };
