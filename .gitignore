@@ -10,4 +10,5 @@ out/
 .env.local
 public/feed.xml
 .vercel
-.history
+~partytown
+.vscode

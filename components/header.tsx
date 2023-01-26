@@ -1,120 +1,60 @@
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import Text from "./text";
-import { useRouter } from "next/router";
-import { AnimateSharedLayout, motion } from "framer-motion";
+"use client";
+
 import cx from "classnames";
+import NextLink from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import Container from "./container";
 import IconArrowDropDown from "./icons/arrow-drop-down";
 
 const MENU = {
-  "/": "Anasayfa",
-  "/tools": "Ekipmanlar",
-  "/apps": "Uygulamalar",
-  "/bookmarks": "Yer İmleri",
+  "/": "Hakkımda",
+  "/photos": "Fotoğraflar",
 };
 
-function Header() {
+export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const router = useRouter();
 
-  const { pathname } = useRouter();
+  const pathname = usePathname();
   const clearSlash = pathname.split("/")[1];
-  const pathName = clearSlash ? `/${clearSlash}` : "/";
+  const path = clearSlash ? `/${clearSlash}` : "/";
 
   useEffect(() => {
-    const handleRouteChangeStart = () => {
-      setIsNavOpen(false);
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChangeStart);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChangeStart);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    setIsNavOpen(false);
+  }, [pathname]);
 
   return (
-    <AnimateSharedLayout>
-      <motion.header
-        className={cx(
-          isNavOpen ? "-mt-10 bg-zinc-50 py-10 dark:bg-zinc-800" : ""
+    <header className="">
+      <Container>
+        <nav
+          className={cx(
+            isNavOpen ? "flex" : "hidden",
+            "flex-col gap-3 sm:!flex sm:flex-row"
+          )}>
+          {Object.entries(MENU).map(([key, value]) => {
+            const isActive = key === path;
+            return (
+              <span key={key}>
+                <NextLink href={key} className={cx(isActive ? "shine" : "")}>
+                  {value}
+                </NextLink>
+              </span>
+            );
+          })}
+        </nav>
+
+        {!isNavOpen && (
+          <button
+            type="button"
+            className="flex select-none items-center sm:hidden"
+            onClick={() => {
+              setIsNavOpen(true);
+            }}>
+            <span>{MENU[path]}</span>
+            <IconArrowDropDown className="opacity-50" />
+          </button>
         )}
-      >
-        <div className="c-small">
-          {/* Navigation */}
-          <motion.nav
-            layout
-            initial="hidden"
-            animate={isNavOpen ? "visible" : "hidden"}
-            variants={{
-              visible: {
-                height: "auto",
-
-                transition: {
-                  delayChildren: 0.1,
-                  staggerChildren: 0.05,
-                  duration: 0.4,
-                },
-              },
-              hidden: {
-                height: 0,
-              },
-            }}
-            className={cx(
-              "flex flex-col space-y-4 text-xl",
-              isNavOpen ? "pointer-events-auto" : "pointer-events-none"
-            )}
-          >
-            {Object.keys(MENU).map((path) => {
-              const isActive = path === pathName;
-
-              return (
-                <motion.span
-                  variants={{
-                    hidden: {
-                      opacity: 0,
-                      x: 10,
-                      transition: { duration: 0 },
-                    },
-                    visible: {
-                      opacity: 1,
-                      x: 0,
-                    },
-                  }}
-                  key={path}
-                >
-                  <Link href={path}>
-                    <a className="">
-                      <Text dim={isActive ? 2 : undefined}>
-                        {MENU[path]}{" "}
-                        {isActive && <Text size="small">(mevcut sayfa)</Text>}
-                      </Text>
-                    </a>
-                  </Link>
-                </motion.span>
-              );
-            })}
-          </motion.nav>
-
-          {/* Active page */}
-          {!isNavOpen && (
-            <button
-              type="button"
-              className="flex select-none items-center"
-              onClick={() => {
-                setIsNavOpen(true);
-              }}
-            >
-              <Text dim={2} className="">
-                {MENU[pathName]}
-              </Text>
-              <IconArrowDropDown className="opacity-50" />
-            </button>
-          )}
-        </div>
-      </motion.header>
-    </AnimateSharedLayout>
+      </Container>
+    </header>
   );
 }
-
-export default Header;

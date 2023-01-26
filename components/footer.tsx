@@ -1,24 +1,18 @@
-import React from "react";
-import A from "components/a";
-import Text from "./text";
+import Container from "@/components/container";
+import { StyleLink } from "@/components/link";
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="mt-40">
-      <div className="c-small">
-        <Text dim={2}>
+      <Container>
+        <p>
           Bu web sitesinin kaynak kodlarına{" "}
-          <A
-            href="https://github.com/devalpi/homepage"
-            className="underline underline-offset-1"
-          >
+          <StyleLink href="https://github.com/devalpi/homepage">
             Github üzerinden
-          </A>{" "}
+          </StyleLink>{" "}
           ulaşabilirsiniz.
-        </Text>
-      </div>
+        </p>
+      </Container>
     </footer>
   );
 }
-
-export default Footer;

@@ -9,7 +9,7 @@ görüntüler (powered by vercel).
 
 1. `.env.example` dosyasının adını `.env` olarak değiştirin.
 
-> Burada beklenilen tüm değerleri karşılamaz zorundasınız.
+> Burada beklenilen tüm değerleri karşılamak zorundasınız.
 
 2. Bağımlılıkları yükleyin ve çalıştırın
 
@@ -25,10 +25,11 @@ yarn dev
 
 ## İçerikler ve Bağımlılıklar
 
-### Ekipman & Uygulama
+### Giriş
 
-Bu sayfanın içerikleri Airtable hesabımdan geliyor.
+Fotoğraflar sayfası ile aynıdır.
 
-### Yer İmi
+### Fotoğraf
 
-İçerikler Raindrop hesabımdan geliyor.
+Bu sayfanın içerikleri Unsplash hesabımdan geliyor. Fotoğraf yayınlamak
+istediğimde Unsplash hesabımda paylaşmam yeterli oluyor.
