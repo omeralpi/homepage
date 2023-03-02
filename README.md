@@ -33,3 +33,7 @@ Fotoğraflar sayfası ile aynıdır.
 
 Bu sayfanın içerikleri Unsplash hesabımdan geliyor. Fotoğraf yayınlamak
 istediğimde Unsplash hesabımda paylaşmam yeterli oluyor.
+
+### Yer İşaretleri
+
+Bu sayfanın içerikleri Raindrop hesabımdan geliyor.

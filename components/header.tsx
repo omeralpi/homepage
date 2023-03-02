@@ -10,6 +10,7 @@ import IconArrowDropDown from "./icons/arrow-drop-down";
 const MENU = {
   "/": "Hakkımda",
   "/photos": "Fotoğraflar",
+  "/bookmarks": "Yer İşaretleri",
 };
 
 export default function Header() {
