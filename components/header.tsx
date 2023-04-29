@@ -9,6 +9,7 @@ import IconArrowDropDown from "./icons/arrow-drop-down";
 
 const MENU = {
   "/": "Hakkımda",
+  "/portfolio": "Portfolyo",
   "/photos": "Fotoğraflar",
   "/bookmarks": "Yer İşaretleri",
 };
@@ -16,7 +17,7 @@ const MENU = {
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const pathname = usePathname();
+  const pathname: any = usePathname();
   const clearSlash = pathname.split("/")[1];
   const path = clearSlash ? `/${clearSlash}` : "/";
 

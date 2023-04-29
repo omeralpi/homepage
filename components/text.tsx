@@ -15,7 +15,9 @@ const Text: React.FC<ITextProps> = ({
   children,
   className,
   ...props
-}: ITextProps) => {
+}: ITextProps & {
+  dim?: any
+}) => {
   const sizes = {
     small: "text-sm",
     normal: "",
