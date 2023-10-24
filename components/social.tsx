@@ -1,5 +1,4 @@
 import IconGithub from "@/components/icons/github";
-import IconMedium from "@/components/icons/medium";
 import Link from "@/components/link";
 import { META } from "@/data/meta";
 
@@ -24,9 +23,13 @@ export default function Social() {
       <SocialButton href={`mailto:${META.email}`}>
         <span className="mx-2 font-medium">Email</span>
       </SocialButton>
-
-      <SocialButton href={META.social.medium}>
-        <IconMedium />
+      
+      <SocialButton href={META.social.wikiloc}>
+        <span className="mx-2 font-medium">Wikiloc</span>
+      </SocialButton>
+      
+      <SocialButton href={META.social.letterboxd}>
+        <span className="mx-2 font-medium">Letterboxd</span>
       </SocialButton>
 
       <SocialButton href={META.social.github}>
