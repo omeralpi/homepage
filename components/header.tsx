@@ -9,7 +9,6 @@ import IconArrowDropDown from "./icons/arrow-drop-down";
 
 const MENU = {
   "/": "Hakkımda",
-  "/portfolio": "Portfolyo",
   "/photos": "Fotoğraflar",
   "/bookmarks": "Yer İşaretleri",
 };
