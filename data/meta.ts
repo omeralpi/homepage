@@ -8,7 +8,7 @@ export const META = {
     unsplash: "https://unsplash.com/@alpidev",
     medium: "https://medium.com/@alpidev",
     github: "https://github.com/omeralpi",
-    letterboxd: "https://letterboxd.com/devalpi/",
+    letterboxd: "https://letterboxd.com/omeralpi/",
     wikiloc: "https://www.wikiloc.com/wikiloc/user.do?id=13862390",
   },
 };

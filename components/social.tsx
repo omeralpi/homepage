@@ -19,21 +19,22 @@ function SocialButton({ href, children }) {
 
 export default function Social() {
   return (
-    <div className="flex items-center space-x-3">
+    <div className="flex items-center gap-3 flex-wrap">
       <SocialButton href={`mailto:${META.email}`}>
         <span className="mx-2 font-medium">Email</span>
       </SocialButton>
-      
+
       <SocialButton href={META.social.wikiloc}>
         <span className="mx-2 font-medium">Wikiloc</span>
       </SocialButton>
-      
+
       <SocialButton href={META.social.letterboxd}>
         <span className="mx-2 font-medium">Letterboxd</span>
       </SocialButton>
 
       <SocialButton href={META.social.github}>
-        <IconGithub />
+        <IconGithub className="mr-2" />
+        Github
       </SocialButton>
     </div>
   );

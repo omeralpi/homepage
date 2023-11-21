@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { Inter } from "@next/font/google";
+import Script from "next/script";
 import AnalyticsWrapper from "./analytics";
 
 const inter = Inter({
@@ -24,6 +25,12 @@ export default async function Layout({ children }) {
 
         <AnalyticsWrapper />
       </body>
+      <script
+        defer
+        type="text/javascript"
+        src="https://api.pirsch.io/pirsch-events.js"
+        id="pirscheventsjs"
+        data-code="R2S3uIng0RXC5q12ohmg4V3r9Jt94OyO"></script>
     </html>
   );
 }
