@@ -10,11 +10,6 @@ export default function Index() {
           <Title>
             <b className="font-semibold">Merhaba, Ben Ömer 👋</b>
           </Title>
-
-          <p className="text-xl">
-            İçimdeki çocuğu tatmin etmek için yazılım geliştirme ile
-            uğraşıyorum.
-          </p>
         </div>
 
         <div className="mt-10">
