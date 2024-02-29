@@ -24,14 +24,6 @@ export default function Social() {
         <span className="mx-2 font-medium">Email</span>
       </SocialButton>
 
-      <SocialButton href={META.social.wikiloc}>
-        <span className="mx-2 font-medium">Wikiloc</span>
-      </SocialButton>
-
-      <SocialButton href={META.social.letterboxd}>
-        <span className="mx-2 font-medium">Letterboxd</span>
-      </SocialButton>
-
       <SocialButton href={META.social.github}>
         <IconGithub className="mr-2" />
         Github
