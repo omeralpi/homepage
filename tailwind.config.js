@@ -1,20 +1,51 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  darkMode: "media", // "class",
-  content: ["./components/**/*.tsx", "./app/**/*.tsx"],
-  safelist: [
-    {
-      pattern: /grid-cols-(2|3|4|5|6)/, // this config for blog post photo grid
-      variants: ["sm", "md", "lg", "xl"],
-    },
-  ],
+  content: ['src/app/**/*.{js,ts,jsx,tsx,mdx,json}', 'src/components/**/*.{js,ts,jsx,tsx,mdx,json}'],
+  safelist: ['sh__line'],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
-      },
+    darkMode: 'selector',
+    screens: {
+      xs: '390px',
+      sm: '435px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px'
     },
+    extend: {
+      animation: {
+        reveal: 'reveal 0.7s ease-in-out'
+      },
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', ...defaultTheme.fontFamily.sans],
+        mono: ['var(--font-geist-mono)', ...defaultTheme.fontFamily.mono]
+      },
+      keyframes: {
+        reveal: {
+          '0%': { opacity: 0, filter: 'brightness(1) blur(15px)', scale: '1.0125' },
+          '10%': { opacity: 1, filter: 'brightness(1.25) blur(10px)' },
+          '100%': { opacity: 1, filter: 'brightness(1) blur(0)', scale: '1' }
+        }
+      },
+      lineHeight: {
+        slacker: '1.75'
+      },
+      gridTemplateRows: {
+        'max-1': 'repeat(1, minmax(0, max-content))'
+      },
+      height: {
+        'dynamic-screen': '100dvh'
+      },
+      minHeight: {
+        'dynamic-screen': '100dvh'
+      },
+      maxHeight: {
+        'dynamic-screen': '100dvh'
+      }
+    }
   },
-  plugins: [require("@tailwindcss/line-clamp")],
-};
+  plugins: [require('@tailwindcss/container-queries'), require('tailwindcss-animate')],
+  future: {
+    hoverOnlyWhenSupported: true
+  }
+}
