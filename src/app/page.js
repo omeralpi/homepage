@@ -1,8 +1,8 @@
 import { FloatingHeader } from '@/components/floating-header'
+import { NavigationLink } from '@/components/navigation-link'
 import { PageTitle } from '@/components/page-title'
 import { ScrollArea } from '@/components/scroll-area'
-import { LINKS } from '@/lib/constants'
-import Link from 'next/link'
+import { LINKS, PROFILES } from '@/lib/constants'
 
 export default async function Home() {
   return (
@@ -14,17 +14,18 @@ export default async function Home() {
           <p>Hi 👋 I'm Omer, a front-end developer based in Izmir, Turkey.</p>
           <p>I develop things as a Front-end Developer at Izmir Teknoloji.</p>
 
-          <div>
-            <div className="mb-2">Visit my;</div>
-            <ul className="list-inside list-disc">
+          <div className="lg:hidden">
+            <div className="flex flex-col gap-1">
               {LINKS.filter((x) => x.href !== '/').map((link) => (
-                <li key={link.href}>
-                  <Link className="font-medium underline" href={link.href}>
-                    {link.label}
-                  </Link>
-                </li>
+                <NavigationLink key={link.href} href={link.href} label={link.label} icon={link.icon} />
               ))}
-            </ul>
+            </div>
+            <hr />
+            <div className="flex flex-col gap-1">
+              {Object.values(PROFILES).map((profile) => (
+                <NavigationLink key={profile.url} href={profile.url} label={profile.title} icon={profile.icon} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
