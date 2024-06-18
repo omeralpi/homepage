@@ -1,6 +1,5 @@
 import {
   ArmchairIcon,
-  BookmarkIcon,
   GithubIcon,
   InstagramIcon,
   LinkedinIcon,
@@ -48,9 +47,9 @@ export const PROFILES = {
     url: 'https://www.instagram.com/_omeralpi',
     icon: <InstagramIcon size={16} />
   },
-  soundcloud: {
-    title: 'Soundcloud',
-    url: 'https://soundcloud.com/omeralpi'
+  '1000kitap': {
+    title: '1000Kitap',
+    url: 'https://1000kitap.com/omeralpi'
   },
   letterboxd: {
     title: 'Letterboxd',
@@ -60,6 +59,10 @@ export const PROFILES = {
         <path d="M521.3 128c65.6 0 118.7 53.1 118.7 118.6s-53.1 118.6-118.7 118.6c-42.5 0-79.7-22.3-100.7-55.8 11.4-18.2 18-39.7 18-62.8s-6.6-44.6-18-62.8l.8-1.2c20.8-32.3 56.8-53.9 97.9-54.6h2zM320 128c42.5 0 79.7 22.3 100.7 55.8-11.4 18.2-18 39.7-18 62.8s6.6 44.6 18 62.8l-.8 1.2c-20.8 32.3-56.8 53.9-97.9 54.6h-2c-42.5 0-79.7-22.3-100.7-55.8 11.4-18.2 18-39.7 18-62.8s-6.6-44.6-18-62.8l.8-1.2c20.8-32.3 56.8-53.9 97.9-54.6h2zm-201.3 0c42.5 0 79.7 22.3 100.7 55.8-11.4 18.2-18 39.7-18 62.8s6.6 44.6 18 62.8l-.8 1.2c-20.8 32.3-56.8 53.9-97.9 54.6h-2C53.1 365.1 0 312.1 0 246.6S53.1 128 118.7 128z"></path>
       </svg>
     )
+  },
+  spotify: {
+    title: 'Spotify',
+    url: 'https://open.spotify.com/user/31zsk376ltun7btpvekcaldvsuoq'
   },
   wikiloc: {
     title: 'Wikiloc',
@@ -96,12 +99,12 @@ export const LINKS = [
     href: '/workspace',
     label: 'Workspace',
     icon: <ArmchairIcon size={16} />
-  },
-  {
-    href: '/bookmarks',
-    label: 'Bookmarks',
-    icon: <BookmarkIcon size={16} />
   }
+  // {
+  //   href: '/bookmarks',
+  //   label: 'Bookmarks',
+  //   icon: <BookmarkIcon size={16} />
+  // }
 ]
 
 export const WORKSPACE_ITEMS = [
