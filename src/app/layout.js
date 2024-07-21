@@ -9,7 +9,6 @@ import { sharedMetadata } from '@/app/shared-metadata'
 import { MenuContent } from '@/components/menu-content'
 import { SideMenu } from '@/components/side-menu'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { PROFILES } from '@/lib/constants'
 
 export default async function RootLayout({ children }) {
   const { isEnabled } = draftMode()
@@ -68,11 +67,11 @@ export const metadata = {
   alternates: {
     canonical: '/'
   },
-  twitter: {
-    card: 'summary_large_image',
-    site: `@${PROFILES.twitter.username}`,
-    creator: `@${PROFILES.twitter.username}`
-  },
+  // twitter: {
+  //   card: 'summary_large_image',
+  //   site: `@${PROFILES.twitter.username}`,
+  //   creator: `@${PROFILES.twitter.username}`
+  // },
   other: {
     pinterest: 'nopin'
   }
