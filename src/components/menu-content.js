@@ -19,7 +19,7 @@ export const MenuContent = () => (
         />
         <div className="flex flex-col">
           <span className="font-semibold tracking-tight">Omer Alpi</span>
-          <span className="text-gray-600">Front-end Developer</span>
+          <span className="text-gray-600">Product Hacker</span>
         </div>
       </Link>
       <div className="flex flex-col gap-1">
