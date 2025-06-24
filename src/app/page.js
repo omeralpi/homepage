@@ -11,7 +11,8 @@ export default async function Home() {
       <div className="content-wrapper">
         <div className="content">
           <PageTitle title="Home" />
-          <p>Hi 👋 I'm Ömer, a front-end developer at Izmir Teknoloji in Izmir, Turkey.</p>
+          <p>Ömer. I build SaaS tools that just work. Fast ⚡ and clean. No bullshit.</p>
+          <p>Solo, from Izmir. My game, my rules.</p>
 
           <div className="lg:hidden">
             <div className="flex flex-col gap-1">
