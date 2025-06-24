@@ -11,8 +11,7 @@ export default async function Home() {
       <div className="content-wrapper">
         <div className="content">
           <PageTitle title="Home" />
-          <p>Hi 👋 I'm Ömer, a front-end developer at Izmir Teknoloji in Izmir, Turkey.</p>
-
+          <p>Product hacker at work</p>
           <div className="lg:hidden">
             <div className="flex flex-col gap-1">
               {LINKS.filter((x) => x.href !== '/').map((link) => (
