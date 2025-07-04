@@ -29,11 +29,11 @@ export const PROFILES = {
     url: 'https://github.com/omeralpi',
     icon: <GithubIcon size={16} />
   },
-  // linkedin: {
-  //   title: 'LinkedIn',
-  //   url: 'https://www.linkedin.com/in/omeralpi',
-  //   icon: <LinkedinIcon size={16} />
-  // },
+  linkedin: {
+     title: 'LinkedIn',
+     url: 'https://www.linkedin.com/in/omeralpi',
+     icon: <LinkedinIcon size={16} />
+  },
   // instagram: {
   //   title: 'Instagram',
   //   url: 'https://www.instagram.com/_omeralpi',
