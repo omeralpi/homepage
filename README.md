@@ -1,52 +1,96 @@
-# alpi.dev
+# omeralpi
 
-My personal website has evolved over the years — from a simple static HTML page, to `Create React App`, to `GatsbyJS`,
-then to a combination of `Next.js`, `MDX`, and finally to a combination of `Next.js`, `Tailwind CSS` and `Contentful`.
-It serves as an app-like-web platform for highlighting my journey, showcasing my bookmarks, and more.
+Personal website of Omer Alpi, built with Next.js and deployed on Vercel.
 
 ## Overview
 
-- `/` — Home page.
-- `/[slug]` — Static pre-rendered pages using [Contentful](https://www.contentful.com). (e.g. `/stack`)
-- `/journey` — Journey page.
-- `/workspace` — Workspace page.
-- `/bookmarks` — Bookmarks page.
-- `/bookmarks/[slug]` — Static pre-rendered bookmarks pages using [Raindrop](https://raindrop.io/).
-- `/bookmarks.xml` — Bookmarks XML feed.
-- `/api` — API routes.
+This repository contains the source code for [alpi.dev](https://alpi.dev). It's designed to be easily customizable and can serve as a template for your own personal website.
 
-## Running Locally
+## Features
+
+- **Modern Stack**: Built with Next.js 15, React 19, TypeScript, and TailwindCSS 4
+- **Blog with MDX**: Fully-featured blog with MDX support, including math notation via KaTeX
+- **Responsive Design**: Mobile-first approach with elegant navigation for all device sizes
+- **Dark Mode**: Seamless light/dark mode switching with next-themes (default is dark)
+- **shadcn/ui Components**: Customizable UI components with Radix UI primitives
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- pnpm (recommended) or npm or yarn
+
+### Installation
+
+1. Clone this repository to your local machine:
 
 ```bash
-$ git clone https://github.com/omeralpi/alpi.dev.git
-$ cd alpi.dev
-$ bun i
-$ bun dev
+git clone https://github.com/omeralpi/homepage.git
 ```
 
-Create a `.env` file similar to [`.env.example`](https://github.com/omeralpi/alpi.dev/blob/master/.env.example).
+2. Navigate to the project directory:
 
-## Tech Stack
+```bash
+cd homepage
+```
 
-- [Next.js](https://nextjs.org)
-- [Tailwind CSS](https://tailwindcss.com)
-- [shadcn/ui](https://ui.shadcn.com)
-- [Contentful](https://www.contentful.com)
-- [Raindrop](https://raindrop.io)
-- [Supabase](https://supabase.com)
-- [Vercel](https://vercel.com)
+3. Install dependencies:
+
+```bash
+pnpm install
+# or
+npm install
+# or
+yarn
+```
+
+4. Start the development server with Turbopack:
+
+```bash
+pnpm dev
+# or
+npm run dev
+# or
+yarn dev
+```
+
+5. Open your browser and visit `http://localhost:3000`
+
+## Customization
+
+1. Edit your personal information in `app/page.tsx` and `app/layout.tsx`
+2. Replace images in the `public` directory with your own (especially `me.jpg` for your avatar)
+3. Add your own blog posts as MDX files in the `content/blog` directory
+4. Customize colors and styling in `app/globals.css`
+
+## Deployment
+
+This project is optimized for deployment on Vercel. Simply push your repository to GitHub and connect it to Vercel for automatic deployments.
 
 ## License
 
-1. Feel free to take inspiration from this code.
-2. Avoid directly copying it, please.
-3. Crediting the author is appreciated.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-No complicated licensing. Be kind and help others learn.
+## Usage as a Template
 
-> You can use the same license with: https://github.com/superkhau/lice
+Feel free to use this repository as a template for your own personal website. If you do, please consider:
 
-```bash
-npm install -g lice
-lice -l homepage
-```
+1. Giving appropriate credit
+2. Removing my personal information (inside `data/resume.ts`) and replacing it with your own
+3. Sharing your own improvements back with the community
+
+## Contributing
+
+Contributions are welcome! Feel free to submit a Pull Request for improvements, bug fixes, or new features.
+
+## Acknowledgments
+
+- [shadcn/ui](https://ui.shadcn.com/) for the beautifully designed components
+- [Next.js](https://nextjs.org/) for the React framework
+- [TailwindCSS](https://tailwindcss.com/) for the utility-first CSS
+- Inspired by various personal websites in the developer community
+
+---
+
+Built with ❤️ by [Omer Alpi](https://alpi.dev)

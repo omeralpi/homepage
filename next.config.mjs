@@ -1,29 +1,17 @@
-import million from 'million/compiler'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  logging: {
-    fetches: {
-      fullUrl: process.env.NODE_ENV === 'development'
-    }
-  },
-  trailingSlash: false,
-  images: {
-    deviceSizes: [390, 435, 768, 1024, 1280],
-    formats: ['image/avif']
-  },
-  experimental: {
-    optimizePackageImports: ['framer-motion', '@supabase/supabase-js', 'react-tweet'],
-    webVitalsAttribution: ['FCP', 'LCP', 'CLS', 'FID', 'TTFB', 'INP']
-  }
-}
+	// Configure `pageExtensions` to include markdown and MDX files
+	pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+	// Optionally, add any other Next.js config below
+	images: {
+		minimumCacheTTL: 1209600,
+		remotePatterns: [
+			{
+				hostname: "**.blob.vercel-storage.com",
+			}
+		],
+	},
+	transpilePackages: ["next-mdx-remote"],
+};
 
-const millionConfig = {
-  auto: {
-    rsc: true
-  },
-  server: true,
-  rsc: true
-}
-
-export default million.next(nextConfig, millionConfig)
+export default nextConfig;
